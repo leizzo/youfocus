@@ -8,7 +8,7 @@ body {
 }
 
 .open-yt-focus-options {
-  @apply -translate-x-96 opacity-10;
+  @apply -translate-x-96 opacity-20 blur-sm;
 }
 
 ytd-app {
@@ -17,7 +17,7 @@ ytd-app {
 }
 
 #yt-focus-content {
-  @apply w-96 h-full right-0 absolute z-10 p-2 text-sm dark:text-white;
+  @apply w-96 h-full right-0 absolute z-10 p-2 text-sm bg-gradient-to-b  dark:text-white dark:from-zinc-900 from-gray-50;
 }
 
 #yt-focus-toolbar {
