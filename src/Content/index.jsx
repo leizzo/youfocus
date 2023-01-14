@@ -2,12 +2,17 @@ import './content.css'
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./shells/main";
+import { ELEMENT_SELECTOR } from './helpers';
 
 
-const findElement = setInterval(() => {
+const observer = new MutationObserver((_, obs) => {
 
-  if (document.querySelector('ytd-watch-flexy[flexy] #secondary.ytd-watch-flexy') && document.querySelector('#end.ytd-masthead')) {
 
+  if (ELEMENT_SELECTOR.toolbar) {
+
+    /**
+     * TOOLBAR SHELL INITIALIZE
+     */
     const root = document.createElement("div");
     root.id = "yt-focus-toolbar";
     document.querySelector('ytd-masthead #end').append(root);
@@ -18,7 +23,9 @@ const findElement = setInterval(() => {
       </React.StrictMode>
     );
 
-
+    /**
+     * CONTENT SHELL INITIALIZE
+     */
     const contentRoot = document.createElement("div");
     contentRoot.id = "yt-focus-content";
     document.querySelector('body').append(contentRoot);
@@ -29,6 +36,13 @@ const findElement = setInterval(() => {
       </React.StrictMode>
     );
 
-    clearInterval(findElement);
+    obs.disconnect();
+    return;
   }
-}, 1)
+});
+
+
+observer.observe(document, {
+  childList: true,
+  subtree: true
+});
