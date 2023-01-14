@@ -1,6 +1,6 @@
 # yt-focus
 
-[![leizzo](https://circleci.com/gh/leizzo/yt-focus.svg?style=svg)](https://app.circleci.com/pipelines/github/leizzo/yt-focus?branch=main)
+![CircleCI](https://img.shields.io/circleci/build/gh/leizzo/yt-focus/main?token=cb469ae384bdf180a49e85b5aa250d03e3266c2f)
 
 
 Alpha Release
