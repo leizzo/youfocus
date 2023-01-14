@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply w-full h-full overflow-x-hidden;
+}
+
+.open-yt-focus-options {
+  @apply -translate-x-96 opacity-10;
+}
+
+ytd-app {
+  overflow-x: hidden !important;
+  @apply transition-all ease-in-out duration-300 z-20;
+}
+
+#yt-focus-content {
+  @apply w-96 h-full right-0 absolute z-10 p-2 text-sm dark:text-white;
+}
+
+#yt-focus-toolbar {
+  @apply text-sm;
+}
