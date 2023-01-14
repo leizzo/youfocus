@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 import { ELEMENT_SELECTOR } from "../helpers";
-import Button from "./ui/Button";
+import Button from "../components/ui/Button";
 
 export default function toolbar() {
   const [enabled, setEnabled] = useState(false)
