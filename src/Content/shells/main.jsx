@@ -1,11 +1,11 @@
-import Toolbar from './components/toolbar';
-import Content from './components/content';
-import { OptionsContextProvider } from './context/options'
+import ToolbarShell from './toolbar';
+import ContentShell from './content';
+import { OptionsContextProvider } from '../context/options'
 
 function ToolbarWrapper() {
   return <>
     <OptionsContextProvider>
-      <Toolbar />
+      <ToolbarShell />
     </OptionsContextProvider>
   </>
 }
@@ -13,7 +13,7 @@ function ToolbarWrapper() {
 function ContentWrapper() {
   return <>
     <OptionsContextProvider>
-      <Content />
+      <ContentShell />
     </OptionsContextProvider>
   </>
 }
