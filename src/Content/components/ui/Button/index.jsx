@@ -1,17 +1,44 @@
-import { ButtonRoundedBase } from './Button';
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import ButtonRoundedBase from './Button';
 
 /**
  *
- * @param {variant} variant
+ * @param {variant} variant | secondary | outlined
+ * @param {size} size | large | small
+ * @param {onClick} onClick
+ * @param {text} text
  * @returns
  */
-export default function Button({ ...props }) {
-  switch (props.variant) {
+function Button({
+  variant, size, onClick, text,
+}) {
+  switch (variant) {
     case 'secondary':
-      return <ButtonRoundedBase {...props} />
-    case 'link':
-      return <ButtonRoundedBase {...props} />
+      break;
     default:
-      return <ButtonRoundedBase {...props} />
+      return (
+        <ButtonRoundedBase
+          size={size}
+          onClick={onClick}
+          text={text}
+        />
+      );
   }
 }
+
+Button.propTypes = {
+  variant: PropTypes.string,
+  size: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  variant: null,
+  onClick: () => {},
+  size: null,
+};
+
+export default Button;

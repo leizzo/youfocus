@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from 'react';
 
-import { ELEMENT_SELECTOR } from "../helpers";
-import Button from "../components/ui/Button";
+import { ELEMENT_SELECTOR } from '../helpers';
+import Button from '../components/ui/Button';
 
-export default function toolbar() {
-  const [enabled, setEnabled] = useState(false)
+export default function Toolbar() {
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
     if (enabled) {
@@ -14,11 +14,16 @@ export default function toolbar() {
     }
   });
 
-
-  return <>
-    <Button size="small" onClick={() => setEnabled(!enabled)}>
-      YT FOCUS ENABLED
-    </Button>
-    {enabled && <div className="w-full h-screen absolute left-0 top-0" onClick={() => setEnabled(!enabled)}></div>}
-  </>
+  return (
+    <>
+      <Button onClick={() => setEnabled(!enabled)} text="YT FOCUS" />
+      {enabled && (
+      <div
+        className="w-full h-screen absolute left-0 top-0"
+        onClick={() => setEnabled(!enabled)}
+        aria-hidden
+      />
+      )}
+    </>
+  );
 }

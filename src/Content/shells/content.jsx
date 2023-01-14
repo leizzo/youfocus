@@ -1,12 +1,11 @@
-import { useOptionsContext } from "../context/options"
+import React from 'react';
+import SwitchBase from '../components/ui/Switch';
 
 export default function Content() {
-  const { options, setOptions } = useOptionsContext();
-
-
   return (
     <div className="flex flex-wrap w-full">
       Content Test
+      <SwitchBase />
     </div>
   );
 }
