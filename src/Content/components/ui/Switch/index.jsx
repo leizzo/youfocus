@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import { Switch } from '@headlessui/react'
-import { classNames } from '../../../helpers'
-
+import React, { useState } from 'react';
+import { Switch } from '@headlessui/react';
+import { classNames } from '../../../helpers';
 
 export default function SwitchBase() {
-  const [enabled, setEnabled] = useState(false)
+  const [enabled, setEnabled] = useState(false);
 
   return (
     <Switch
@@ -21,9 +20,10 @@ export default function SwitchBase() {
         className={
           classNames(
             enabled ? 'translate-x-6' : 'translate-x-1',
-            'inline-block h-4 w-4 transform rounded-full bg-white transition'
-          )}
+            'inline-block h-4 w-4 transform rounded-full bg-white transition',
+          )
+}
       />
     </Switch>
-  )
+  );
 }

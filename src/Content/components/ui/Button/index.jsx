@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ButtonRoundedBase from './Button';
+import ButtonBase from './Button';
 
 /**
  *
@@ -19,7 +19,7 @@ function Button({
       break;
     default:
       return (
-        <ButtonRoundedBase
+        <ButtonBase
           size={size}
           onClick={onClick}
           text={text}

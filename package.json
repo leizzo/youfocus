@@ -12,8 +12,8 @@
     "url": "https://github.com/leizzo/yt-focus/issues"
   },
   "engines": {
-    "yarn": ">=1.22.17",
-    "node": ">=16.18.0"
+    "yarn": ">=1.22",
+    "node": ">=16"
   },
   "scripts": {
     "dev": "vite",

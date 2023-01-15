@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import { classNames } from '../../../helpers';
 
 /**
- *
+ * Button Base
  * @param {size} size | large | small
  * @param {onClick} onClick Function
  * @returns
  */
-function ButtonRoundedBase({ size, text, onClick }) {
+function ButtonBase({ size, text, onClick }) {
   return (
     <button
       type="button"
@@ -36,15 +36,16 @@ function ButtonRoundedBase({ size, text, onClick }) {
   );
 }
 
-ButtonRoundedBase.propTypes = {
+ButtonBase.propTypes = {
   size: PropTypes.string,
   onClick: PropTypes.func,
   text: PropTypes.string,
 };
 
-ButtonRoundedBase.defaultProps = {
+ButtonBase.defaultProps = {
   onClick: () => {},
   text: null,
   size: null,
 };
-export default ButtonRoundedBase;
+
+export default ButtonBase;
