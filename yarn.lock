@@ -2606,6 +2606,11 @@ tailwindcss@^3.2.4:
     quick-lru "^5.1.1"
     resolve "^1.22.1"
 
+talkr@^3.3.9:
+  version "3.3.9"
+  resolved "https://registry.yarnpkg.com/talkr/-/talkr-3.3.9.tgz#2e0710feeb7b599b5d7c245550dc0e571300e0c7"
+  integrity sha512-4HsZBTf27hK122KHRl4jmOu+Il/cOGEISj0YhXwNCp8qV28WysPAyYT0gO1fzCzKDL5kfh890cIevvFeTADqtw==
+
 text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
