@@ -1,13 +1,10 @@
 import React, {
-  createContext, useContext, useMemo, useState,
+  createContext, useCallback, useContext, useMemo, useState,
 } from 'react';
 import PropTypes from 'prop-types';
 
 const defaultOptions = {
   isSidebarEnabled: false,
-  isShortsEnabled: true,
-  isViewCountAndDateEnabled: true,
-  isVideoCreatorEnabled: true,
 };
 
 export const OptionsContext = createContext(defaultOptions);
@@ -36,7 +33,11 @@ export function useOptionsContext() {
 export function OptionsContextProvider({ children }) {
   const [options, setOptions] = useState(defaultOptions);
 
-  const oo = useMemo(() => ({ options, setOptions }), []);
+  const updateOptions = useCallback((data) => {
+    setOptions({ ...options, ...data });
+  }, [options]);
+
+  const oo = useMemo(() => ({ options, updateOptions }), [options, updateOptions]);
 
   return (
     <OptionsContext.Provider value={oo}>

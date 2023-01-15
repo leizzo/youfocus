@@ -1,8 +1,12 @@
 import './content.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Talkr } from 'talkr';
+import en from '../i18n/en.json';
 import App from './shells/main';
 import { ELEMENT_SELECTOR } from './helpers';
+
+const activeChromeLanguage = chrome.i18n.getUILanguage().split('-')[0];
 
 /**
  * This Observer looks at that if element is exist at the DOM.
@@ -18,7 +22,9 @@ const observer = new MutationObserver((_, obs) => {
 
     ReactDOM.createRoot(document.getElementById('yt-focus-toolbar')).render(
       <React.StrictMode>
-        <App.Toolbar />
+        <Talkr languages={{ en }} defaultLanguage={activeChromeLanguage}>
+          <App.Toolbar />
+        </Talkr>
       </React.StrictMode>,
     );
 
@@ -31,7 +37,9 @@ const observer = new MutationObserver((_, obs) => {
 
     ReactDOM.createRoot(document.getElementById('yt-focus-content')).render(
       <React.StrictMode>
-        <App.Content />
+        <Talkr languages={{ en }} defaultLanguage={activeChromeLanguage}>
+          <App.Content />
+        </Talkr>
       </React.StrictMode>,
     );
 
