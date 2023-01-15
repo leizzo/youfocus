@@ -1,7 +1,20 @@
 {
   "name": "yt-focus",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.2-alpha.0",
+  "license": "MIT",
+  "homepage": "https://github.com/leizzo/yt-focus#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leizzo/yt-focus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leizzo/yt-focus/issues"
+  },
+  "engines": {
+    "yarn": ">=1.22.17",
+    "node": ">=16.18.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
