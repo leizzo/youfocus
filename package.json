@@ -1,7 +1,7 @@
 {
   "name": "yt-focus",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "homepage": "https://github.com/leizzo/yt-focus#readme",
   "repository": {
@@ -24,7 +24,8 @@
     "@headlessui/react": "^1.7.7",
     "prop-types": "^15.8.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "talkr": "^3.3.9"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^1.0.14",
