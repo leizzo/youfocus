@@ -1,26 +1,25 @@
-import ToolbarShell from './toolbar';
+import React from 'react';
+import Toolbar from './toolbar';
 import ContentShell from './content';
-import { OptionsContextProvider } from '../context/options'
+import { OptionsContextProvider } from '../context/options';
 
 function ToolbarWrapper() {
-  return <>
+  return (
     <OptionsContextProvider>
-      <ToolbarShell />
+      <Toolbar />
     </OptionsContextProvider>
-  </>
+  );
 }
 
 function ContentWrapper() {
-  return <>
+  return (
     <OptionsContextProvider>
       <ContentShell />
     </OptionsContextProvider>
-  </>
+  );
 }
 
-function App() {
-  return <></>
-}
+const App = () => {};
 
 App.Toolbar = ToolbarWrapper;
 App.Content = ContentWrapper;
