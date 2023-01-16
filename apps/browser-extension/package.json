@@ -1,6 +1,6 @@
 {
-  "name": "yt-focus",
-  "version": "1.0.0",
+  "name": "@yt-focus/browser-extension",
+  "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-custom": "*",
+    "@yt-focus/eslint-config-custom": "*",
     "@crxjs/vite-plugin": "^1.0.14",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
