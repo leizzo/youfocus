@@ -1,0 +1,17 @@
+{
+  "name": "@yt-focus/docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn next dev -p 3005",
+    "build": "yarn next build"
+  },
+  "dependencies": {
+    "next": "^13.1.2",
+    "nextra": "^2.2.3",
+    "nextra-theme-docs": "^2.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
