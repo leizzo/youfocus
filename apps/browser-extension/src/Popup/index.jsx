@@ -1,12 +1,3 @@
-import React from 'react';
-import './popup.css';
-
-function Popup() {
-  return (
-    <>
-      Popup Page
-    </>
-  );
-}
+import { Popup } from '@yt-focus/popup';
 
 export default Popup;

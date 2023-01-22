@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ButtonBase from './Button';
+import { ButtonBase } from './Button';
 
 /**
  *
@@ -11,7 +11,7 @@ import ButtonBase from './Button';
  * @param {text} text
  * @returns
  */
-function Button({
+export function Button({
   variant, size, onClick, text,
 }) {
   switch (variant) {

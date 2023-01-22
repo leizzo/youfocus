@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { classNames } from '../../../helpers';
+import { classNames } from '../../utils/classNames';
 
 /**
  * Button Base
@@ -9,7 +9,7 @@ import { classNames } from '../../../helpers';
  * @param {onClick} onClick Function
  * @returns
  */
-function ButtonBase({ size, text, onClick }) {
+export function ButtonBase({ size, text, onClick }) {
   return (
     <button
       type="button"

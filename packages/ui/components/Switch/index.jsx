@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
-import { classNames } from '../../../helpers';
+import { classNames } from '../../utils/classNames';
 /**
  *
  * @param {onChange} onChange function
  * @returns
  */
-export default function SwitchBase({ text, checked, onChange }) {
+export function SwitchBase({ text, checked, onChange }) {
   const [enabled, setEnabled] = useState(checked);
 
   const onEnabledChanged = () => {
@@ -41,3 +41,5 @@ export default function SwitchBase({ text, checked, onChange }) {
     </Switch.Group>
   );
 }
+
+export default SwitchBase;

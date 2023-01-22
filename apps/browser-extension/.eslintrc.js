@@ -1,9 +1,10 @@
 module.exports = {
   root: true,
-  extends: ['custom'],
+  extends: ['@yt-focus/eslint-config'],
   env: {
     browser: true,
     es2021: true,
+    webextensions: true,
   },
   plugins: [
     'react',

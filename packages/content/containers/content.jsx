@@ -1,16 +1,19 @@
 import React from 'react';
-import { useT } from 'talkr';
 
-import { useOptionsContext } from '../context/options';
-import SwitchBase from '../components/ui/Switch';
-import { ELEMENT_CLASSNAMES, observeElementInTheDOM, observeUrlChange } from '../helpers/index';
+import {
+  ELEMENT_CLASSNAMES, observeElementInTheDOM, observeUrlChange, SwitchBase,
+} from '@yt-focus/ui';
+import { useSettingsContext } from '../context/settings.context';
 
-export default function Content() {
-  const { options, updateOptions } = useOptionsContext();
-  const { T } = useT();
+/**
+ * Content Container
+ * @returns
+ */
+export function Content() {
+  const { settings, updateSettings } = useSettingsContext();
 
   observeUrlChange((location) => {
-    if (location.pathname === '/watch' && options.isSidebarEnabled) {
+    if (location.pathname === '/watch' && settings.isSidebarEnabled) {
       observeElementInTheDOM(ELEMENT_CLASSNAMES.sidebar, (element) => {
         element.remove();
       });
@@ -19,7 +22,7 @@ export default function Content() {
 
   return (
     <div className="flex flex-wrap w-full">
-      {Object.entries(options)
+      {Object.entries(settings)
         .reduce((a, c) => {
           a.push({ [c[0]]: c[1], key: c[0] });
           return a;
@@ -30,11 +33,12 @@ export default function Content() {
             className="w-full"
           >
             <SwitchBase
-              text={T(item.key)}
+              text={item.key}
+              checked={item[item.key]}
               onChange={
-                () => updateOptions(
+                () => updateSettings(
                   {
-                    [item.key]: !options[item.key],
+                    [item.key]: !settings[item.key],
                   },
                 )
               }
@@ -44,3 +48,5 @@ export default function Content() {
     </div>
   );
 }
+
+export default Content;
