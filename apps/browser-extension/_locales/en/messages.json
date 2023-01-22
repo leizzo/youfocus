@@ -3,12 +3,12 @@
     "message": "YT Focus"
   },
   "isSidebarDisabled": {
-    "message": "Sidebar Visibility"
+    "message": "Sidebar Disabled"
   },
   "isShortsDisabled": {
-    "message": "Shorts Visibility"
+    "message": "Shorts Disabled"
   },
   "isCommentDisabled": {
-    "message": "Comment Visibility"
+    "message": "Comment Disabled"
   }
 }

@@ -13,7 +13,7 @@ export function Content() {
   const { settings, updateSettings } = useSettingsContext();
 
   observeUrlChange((location) => {
-    if (location.pathname === '/watch' && settings.isSidebarEnabled) {
+    if (location.pathname === '/watch' && settings.isSidebarDisabled) {
       observeElementInTheDOM(ELEMENT_CLASSNAMES.sidebar, (element) => {
         element.remove();
       });
@@ -30,7 +30,7 @@ export function Content() {
         .map((item) => (
           <div
             key={item.key}
-            className="w-full"
+            className="w-full mb-3"
           >
             <SwitchBase
               text={getMessage(item.key)}

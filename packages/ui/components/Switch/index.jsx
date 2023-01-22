@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Switch } from '@headlessui/react';
 import { classNames } from '../../utils/classNames';
+
 /**
- *
- * @param {onChange} onChange function
+ * Switch
+ * @param {string} text
+ * @param {boolean} checked
+ * @param {function} onChange
  * @returns
  */
 export function SwitchBase({ text, checked, onChange }) {
-  const [enabled, setEnabled] = useState(checked);
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    setEnabled(checked);
+  }, [checked]);
 
   const onEnabledChanged = () => {
     setEnabled(!enabled);
@@ -18,7 +26,7 @@ export function SwitchBase({ text, checked, onChange }) {
     <Switch.Group>
       <div className="flex items-center">
         <Switch
-          checked={enabled}
+          checked={checked}
           onChange={onEnabledChanged}
           className={classNames(
             enabled ? 'bg-red-600 ' : 'bg-zinc-400',
@@ -41,5 +49,17 @@ export function SwitchBase({ text, checked, onChange }) {
     </Switch.Group>
   );
 }
+
+SwitchBase.propTypes = {
+  text: PropTypes.string,
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
+};
+
+SwitchBase.defaultProps = {
+  text: null,
+  checked: false,
+  onChange: null,
+};
 
 export default SwitchBase;

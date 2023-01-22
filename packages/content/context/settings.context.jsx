@@ -1,6 +1,7 @@
 import React, {
-  createContext, useCallback, useContext, useMemo, useState,
+  createContext, useCallback, useContext, useMemo,
 } from 'react';
+import { useSettingsStore } from '@yt-focus/storage';
 import PropTypes from 'prop-types';
 
 const defaultOptions = {
@@ -33,14 +34,14 @@ export function useSettingsContext() {
  * @returns
  */
 export function SettingsContextProvider({ children }) {
-  const [settings, setSettings] = useState(defaultOptions);
+  const [settings, setSettings] = useSettingsStore();
 
   const updateSettings = useCallback((data) => {
     setSettings({ ...settings, ...data });
   }, [settings]);
 
   const settingsContextValue = useMemo(() => (
-    { settings, updateSettings }), [settings, updateSettings]);
+    { settings, updateSettings }), [settings]);
 
   return (
     <SettingsContext.Provider value={settingsContextValue}>

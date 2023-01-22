@@ -1,0 +1,11 @@
+{
+  "name": "@yt-focus/storage",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "use-chrome-storage": "^1.0.8"
+  }
+}
