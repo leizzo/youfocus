@@ -1,7 +1,7 @@
 import '@yt-focus/ui/index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Content, Toolbar, OptionsContextProvider } from '@yt-focus/content';
+import { Content, Toolbar, SettingsContextProvider } from '@yt-focus/content';
 import { ELEMENT_SELECTOR } from '@yt-focus/ui';
 
 /**
@@ -18,9 +18,7 @@ const observer = new MutationObserver((_, obs) => {
 
     ReactDOM.createRoot(document.getElementById('yt-focus-toolbar')).render(
       <React.StrictMode>
-        <OptionsContextProvider>
-          <Toolbar />
-        </OptionsContextProvider>
+        <Toolbar />
       </React.StrictMode>,
     );
 
@@ -33,9 +31,9 @@ const observer = new MutationObserver((_, obs) => {
 
     ReactDOM.createRoot(document.getElementById('yt-focus-content')).render(
       <React.StrictMode>
-        <OptionsContextProvider>
+        <SettingsContextProvider>
           <Content />
-        </OptionsContextProvider>
+        </SettingsContextProvider>
       </React.StrictMode>,
     );
 

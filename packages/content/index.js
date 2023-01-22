@@ -11,4 +11,4 @@ export { Toolbar } from './containers/toolbar';
 /**
  * Context
  */
-export { OptionsContextProvider } from './context/options';
+export { SettingsContextProvider } from './context/settings.context';
