@@ -2,13 +2,13 @@
   "toolbar": {
     "message": "YT Focus"
   },
-  "testKey": {
-    "message": "Name"
-  },
-  "isSidebarEnabled": {
+  "isSidebarDisabled": {
     "message": "Sidebar Visibility"
   },
-  "isShortsEnabled": {
+  "isShortsDisabled": {
     "message": "Shorts Visibility"
+  },
+  "isCommentDisabled": {
+    "message": "Comment Visibility"
   }
 }

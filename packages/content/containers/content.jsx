@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  ELEMENT_CLASSNAMES, observeElementInTheDOM, observeUrlChange, SwitchBase,
+  ELEMENT_CLASSNAMES, observeElementInTheDOM, observeUrlChange, SwitchBase, getMessage,
 } from '@yt-focus/ui';
 import { useSettingsContext } from '../context/settings.context';
 
@@ -33,7 +33,7 @@ export function Content() {
             className="w-full"
           >
             <SwitchBase
-              text={item.key}
+              text={getMessage(item.key)}
               checked={item[item.key]}
               onChange={
                 () => updateSettings(
