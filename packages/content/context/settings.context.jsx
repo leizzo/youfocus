@@ -4,7 +4,9 @@ import React, {
 import PropTypes from 'prop-types';
 
 const defaultOptions = {
-  isSidebarEnabled: false,
+  isSidebarDisabled: false,
+  isShortsDisabled: false,
+  isCommentDisabled: false,
 };
 
 export const SettingsContext = createContext(defaultOptions);

@@ -3,5 +3,6 @@ module.exports = {
   extends: ['@yt-focus/eslint-config'],
   env: {
     browser: true,
+    webextensions: true,
   },
 };
