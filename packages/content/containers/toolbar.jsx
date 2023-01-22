@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import { ELEMENT_SELECTOR } from '../helpers';
-import Button from '../components/ui/Button';
+import { ELEMENT_SELECTOR, Button } from '@yt-focus/ui';
 
-export default function Toolbar() {
+export function Toolbar() {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
@@ -16,7 +15,7 @@ export default function Toolbar() {
 
   return (
     <>
-      <Button onClick={() => setEnabled(!enabled)} text="YT FOCUS" />
+      <Button onClick={() => setEnabled(!enabled)} text={chrome.i18n.getMessage('toolbar')} />
       {enabled && (
       <div
         className="w-full h-screen absolute left-0 top-0"
@@ -27,3 +26,5 @@ export default function Toolbar() {
     </>
   );
 }
+
+export default Toolbar;

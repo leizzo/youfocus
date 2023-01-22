@@ -1,13 +1,16 @@
 import React from 'react';
-import { useT } from 'talkr';
 
+import {
+  ELEMENT_CLASSNAMES, observeElementInTheDOM, observeUrlChange, SwitchBase,
+} from '@yt-focus/ui';
 import { useOptionsContext } from '../context/options';
-import SwitchBase from '../components/ui/Switch';
-import { ELEMENT_CLASSNAMES, observeElementInTheDOM, observeUrlChange } from '../helpers/index';
 
-export default function Content() {
+/**
+ * Content Container
+ * @returns
+ */
+export function Content() {
   const { options, updateOptions } = useOptionsContext();
-  const { T } = useT();
 
   observeUrlChange((location) => {
     if (location.pathname === '/watch' && options.isSidebarEnabled) {
@@ -30,7 +33,7 @@ export default function Content() {
             className="w-full"
           >
             <SwitchBase
-              text={T(item.key)}
+              text={item.key}
               onChange={
                 () => updateOptions(
                   {
@@ -44,3 +47,5 @@ export default function Content() {
     </div>
   );
 }
+
+export default Content;

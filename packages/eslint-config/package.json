@@ -1,5 +1,5 @@
 {
-  "name": "@yt-focus/eslint-config-custom",
+  "name": "@yt-focus/eslint-config",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

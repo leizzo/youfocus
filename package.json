@@ -2,7 +2,10 @@
   "name": "yt-focus",
   "private": true,
   "version": "0.2.0",
-  "workspaces": ["packages/*", "apps/*"],
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/leizzo/yt-focus#readme",
   "repository": {
@@ -20,11 +23,10 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel"
   },
-  "dependencies": {
-  },
   "devDependencies": {
-    "eslint-config-custom": "*",
     "turbo": "latest",
-    "@changesets/cli": "^2.26.0"
+    "@changesets/cli": "^2.26.0",
+    "eslint": "^8.2.0",
+    "@yt-focus/eslint-config": "*"
   }
 }
