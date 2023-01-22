@@ -1,0 +1,14 @@
+{
+  "toolbar": {
+    "message": "YT Focus"
+  },
+  "isSidebarDisabled": {
+    "message": "Sidebar Disabled"
+  },
+  "isShortsDisabled": {
+    "message": "Shorts Disabled"
+  },
+  "isCommentDisabled": {
+    "message": "Comment Disabled"
+  }
+}
