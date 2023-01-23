@@ -1,7 +1,5 @@
-import React from 'react';
-
 import {
-  ELEMENT_CLASSNAMES, observeElementInTheDOM, observeUrlChange, SwitchBase, getMessage,
+  ELEMENT_CLASSNAMES, getMessage, observeElementInTheDOM, observeUrlChange, SwitchBase,
 } from '@yt-focus/ui';
 import { useSettingsContext } from '../context/settings.context';
 
