@@ -7,5 +7,3 @@ export function Popup() {
     </>
   );
 }
-
-export default Popup;

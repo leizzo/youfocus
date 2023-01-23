@@ -8,5 +8,3 @@ const INITIAL_VALUE = {
 };
 
 export const useSettingsStore = createChromeStorageStateHookLocal(SETTINGS_KEY, INITIAL_VALUE);
-
-export default useSettingsStore;
