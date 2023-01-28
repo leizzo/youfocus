@@ -1,6 +1,6 @@
 <div align="center">
 <image src="https://img.shields.io/github/package-json/v/leizzo/yt-focus" />
-<image src="https://img.shields.io/circleci/build/gh/leizzo/yt-focus/main?label=circleci&token=cb469ae384bdf180a49e85b5aa250d03e3266c2f" >
+<image src="https://github.com/leizzo/yt-focus/actions/workflows/node.js.yml/badge.svg" >
 </div>
 <div align="center">
 <image src="https://img.shields.io/chrome-web-store/v/yt-focus" />
