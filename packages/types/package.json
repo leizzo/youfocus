@@ -1,0 +1,6 @@
+{
+  "name": "@yt-focus/types",
+  "version": "0.0.0",
+  "typings": "./src/index.d.ts",
+  "license": "MIT"
+}

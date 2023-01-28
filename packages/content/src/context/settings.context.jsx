@@ -1,36 +1,35 @@
-import React, {
-  createContext, useCallback, useContext, useMemo,
-} from 'react';
 import { useSettingsStore } from '@yt-focus/storage';
 import PropTypes from 'prop-types';
-
-const defaultOptions = {
-  isSidebarDisabled: false,
-  isShortsDisabled: false,
-  isCommentDisabled: false,
-};
-
-export const SettingsContext = createContext(defaultOptions);
+import {
+  createContext, useCallback, useMemo,
+} from 'react';
 
 /**
- * Use Options Context
- * @returns
+ * @typedef Settings
+ * @type {import('@yt-focus/types/src/storage.type').SETTINGS_INITIAL_VALUE}
  */
-export function useSettingsContext() {
-  const context = useContext(SettingsContext);
-
-  if (!context) {
-    throw new Error(
-      'useSettingsContext has to be used within SettingsContextProvider',
-    );
-  }
-
-  return context;
-}
 
 /**
- * Options Context Provider
- * @param {children} children
+ * @typedef TSettingsContext
+ * @property {Settings} settings
+ * @property {function} updateSettings
+ */
+
+/**
+ * @type {import('react').Context<TSettingsContext>}
+ */
+export const SettingsContext = createContext({
+  settings: {
+    isSidebarDisabled: false,
+    isCommentDisabled: false,
+    isShortsDisabled: false,
+  },
+  updateSettings: () => {},
+});
+
+/**
+ *
+ * @param {{ children: JSX.Element }} children JSX Element
  * @returns
  */
 export function SettingsContextProvider({ children }) {

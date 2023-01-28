@@ -1,12 +1,8 @@
 import {
   ELEMENT_CLASSNAMES, getMessage, observeElementInTheDOM, observeUrlChange, SwitchBase,
 } from '@yt-focus/ui';
-import { useSettingsContext } from '../context/settings.context';
+import { useSettingsContext } from '../hooks/use-settings.hook';
 
-/**
- * Content Container
- * @returns
- */
 export function Content() {
   const { settings, updateSettings } = useSettingsContext();
 
