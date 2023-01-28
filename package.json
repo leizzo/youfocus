@@ -1,7 +1,7 @@
 {
   "name": "yt-focus",
   "private": true,
-  "version": "0.2.2",
+  "version": "0.2.3",
   "workspaces": [
     "packages/*",
     "apps/*"
