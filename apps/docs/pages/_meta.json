@@ -1,0 +1,26 @@
+{
+  "index": {
+    "title": "Youtube Focus",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": true,
+      "pagination": false
+    }
+  },
+  "documentation": {
+    "title": "Documentation",
+    "type": "page"
+  },
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/le1zzo",
+    "newWindow": true
+  }
+}
