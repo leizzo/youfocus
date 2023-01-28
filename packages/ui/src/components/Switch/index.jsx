@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { Switch } from '@headlessui/react';
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import { classNames } from '../../utils/classNames';
 
 /**
  * Switch
- * @param {string} text
- * @param {boolean} checked
- * @param {function} onChange
- * @returns
+ * @type {Object}
+ * @property {string} text
+ * @property {boolean} checked
+ * @property {function} onChange
  */
 export function SwitchBase({ text, checked, onChange }) {
   const [enabled, setEnabled] = useState(false);

@@ -1,0 +1,13 @@
+{
+  "typeAcquisition": {
+    "include": ["chrome"]
+  },
+  "compilerOptions": {
+    "checkJs": true,
+    "target": "ES6",
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules", "**/node_modules"]
+}

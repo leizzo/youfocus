@@ -1,1 +1,1 @@
-export { Popup } from './components/popup';
+export { Popup } from './src/components/popup';
