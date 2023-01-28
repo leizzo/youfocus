@@ -1,14 +1,12 @@
 /**
  * Containers
  */
-export { Content } from './containers/content';
-export { Toolbar } from './containers/toolbar';
-
+export { Content } from './src/containers/content';
+export { Toolbar } from './src/containers/toolbar';
 /**
  * Hooks
  */
-
 /**
  * Context
  */
-export { SettingsContextProvider } from './context/settings.context';
+export { SettingsContextProvider } from './src/context/settings.context';
