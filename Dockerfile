@@ -1,4 +1,5 @@
-FROM node:alpine AS builder
+FROM node:14-alpine
+
 RUN apk add --no-cache libc6-compat
 RUN apk update
 
