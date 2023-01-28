@@ -1,6 +1,6 @@
 <div align="center">
 <image src="https://img.shields.io/github/package-json/v/leizzo/yt-focus" />
-<image src="https://vercelbadge.vercel.app/api/leizzo/yt-focus" >
+<image src="https://github.com/leizzo/yt-focus/actions/workflows/node.js.yml/badge.svg" >
 </div>
 <div align="center">
 <image src="https://img.shields.io/chrome-web-store/v/yt-focus" />

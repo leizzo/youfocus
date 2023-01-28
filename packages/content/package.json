@@ -4,6 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "@yt-focus/ui": "*",
+    "@yt-focus/storage": "*"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "@yt-focus/eslint-config": "*",
+    "@yt-focus/types": "*"
   }
 }

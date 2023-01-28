@@ -13,7 +13,7 @@ module.exports = defineManifest({
   action: { default_popup: 'index.html' },
   content_scripts: [
     {
-      js: ['src/content/index.jsx'],
+      js: ['./src/content/index.jsx'],
       run_at: 'document_end',
       matches: ['https://*.youtube.com/*'],
     },
