@@ -14,6 +14,8 @@
   "devDependencies": {
     "eslint": "^8.2.0",
     "@yt-focus/eslint-config": "*",
+    "@yt-focus/ui": "*",
+    "@yt-focus/content": "*",
     "@crxjs/vite-plugin": "^1.0.14",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
