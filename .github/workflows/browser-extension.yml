@@ -25,4 +25,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
-      - run: yarn run build --filter=@youfocus/browser-extension
+      - run: yarn && yarn run build --filter=browser-extension
