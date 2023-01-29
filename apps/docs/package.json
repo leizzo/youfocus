@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev -p 3001",
-    "build": "next build",
+    "dev": "rm -rf ./.next && next dev -p 3001",
+    "build": "rm -rf ./.next && next build",
     "start": "next start -p 3001"
   },
   "dependencies": {
