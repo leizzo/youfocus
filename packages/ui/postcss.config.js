@@ -1,1 +1,1 @@
-module.exports = require('@yt-focus/config/postcss.config');
+module.exports = require('@youfocus/config/postcss.config');

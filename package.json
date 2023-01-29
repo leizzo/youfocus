@@ -1,5 +1,5 @@
 {
-  "name": "yt-focus",
+  "name": "youfocus",
   "private": true,
   "version": "0.2.3",
   "workspaces": [
@@ -7,13 +7,13 @@
     "apps/*"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/leizzo/yt-focus#readme",
+  "homepage": "https://github.com/leizzo/youfocus#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leizzo/yt-focus.git"
+    "url": "git+https://github.com/leizzo/youfocus.git"
   },
   "bugs": {
-    "url": "https://github.com/leizzo/yt-focus/issues"
+    "url": "https://github.com/leizzo/youfocus/issues"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -27,6 +27,6 @@
     "turbo": "latest",
     "@changesets/cli": "^2.26.0",
     "eslint": "^8.2.0",
-    "@yt-focus/eslint-config": "*"
+    "@youfocus/eslint-config": "*"
   }
 }

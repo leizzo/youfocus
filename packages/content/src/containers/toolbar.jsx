@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { ELEMENT_SELECTOR, Button, getMessage } from '@yt-focus/ui';
+import { ELEMENT_SELECTOR, Button, getMessage } from '@youfocus/ui';
 
 export function Toolbar() {
   const [enabled, setEnabled] = useState(false);

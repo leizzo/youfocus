@@ -1,3 +1,3 @@
-import { Popup } from '@yt-focus/popup';
+import { Popup } from '@youfocus/popup';
 
 export default Popup;

@@ -1,4 +1,4 @@
-import { useSettingsStore } from '@yt-focus/storage';
+import { useSettingsStore } from '@youfocus/storage';
 import PropTypes from 'prop-types';
 import {
   createContext, useCallback, useMemo,
@@ -6,7 +6,7 @@ import {
 
 /**
  * @typedef Settings
- * @type {import('@yt-focus/types/src/storage.type').SETTINGS_INITIAL_VALUE}
+ * @type {import('@youfocus/types/src/storage.type').SETTINGS_INITIAL_VALUE}
  */
 
 /**

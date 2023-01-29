@@ -1,4 +1,4 @@
-# @yt-focus/ui
+# @youfocus/ui
 
 ## 1.0.0
 

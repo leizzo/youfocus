@@ -4,12 +4,12 @@ const { version } = require('../../package.json');
 
 module.exports = defineManifest({
   manifest_version: 3,
-  name: 'Youtube Focus',
-  short_name: 'YT Focus',
+  name: 'YouFocus',
+  short_name: 'YF',
   version,
-  version_name: `${version}-alpha`,
+  version_name: `${version}-alpha ${new Date().toLocaleDateString()}`,
   default_locale: 'en',
-  description: 'A Chrome Extension for Youtube Focus',
+  description: 'A chrome extension for focusing youtube',
   action: { default_popup: 'index.html' },
   content_scripts: [
     {

@@ -1,4 +1,4 @@
-# @yt-focus/content
+# @youfocus/content
 
 ## 1.0.0
 

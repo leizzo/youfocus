@@ -1,5 +1,5 @@
 {
-  "name": "@yt-focus/ui",
+  "name": "@youfocus/ui",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "eslint": "^8.2.0",
-    "@yt-focus/eslint-config": "*",
-    "@yt-focus/types": "*"
+    "@youfocus/eslint-config": "*",
+    "@youfocus/types": "*"
   }
 }
