@@ -21,7 +21,8 @@
   "packageManager": "yarn@1.22.17",
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel"
+    "dev": "turbo run dev --parallel",
+    "start:docs": "yarn workspace @youfocus/docs start"
   },
   "devDependencies": {
     "turbo": "latest",
