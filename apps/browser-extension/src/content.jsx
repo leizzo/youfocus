@@ -1,8 +1,8 @@
-import '@yt-focus/ui/index.css';
+import '@youfocus/ui/index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Content, Toolbar, SettingsContextProvider } from '@yt-focus/content';
-import { ELEMENT_SELECTOR } from '@yt-focus/ui';
+import { Content, Toolbar, SettingsContextProvider } from '@youfocus/content';
+import { ELEMENT_SELECTOR } from '@youfocus/ui';
 
 /**
  * This Observer looks at that if element is exist at the DOM.

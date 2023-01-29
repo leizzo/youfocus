@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['@yt-focus/eslint-config'],
+  extends: ['@youfocus/eslint-config'],
   env: {
     browser: true,
     es2021: true,

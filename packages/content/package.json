@@ -1,16 +1,16 @@
 {
-  "name": "@yt-focus/content",
+  "name": "@youfocus/content",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
-    "@yt-focus/ui": "*",
-    "@yt-focus/storage": "*"
+    "@youfocus/ui": "*",
+    "@youfocus/storage": "*"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
-    "@yt-focus/eslint-config": "*",
-    "@yt-focus/types": "*"
+    "@youfocus/eslint-config": "*",
+    "@youfocus/types": "*"
   }
 }

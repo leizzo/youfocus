@@ -1,6 +1,6 @@
 import {
   ELEMENT_CLASSNAMES, getMessage, observeElementInTheDOM, observeUrlChange, SwitchBase,
-} from '@yt-focus/ui';
+} from '@youfocus/ui';
 import { useSettingsContext } from '../hooks/use-settings.hook';
 
 export function Content() {

@@ -1,5 +1,5 @@
 {
-  "name": "@yt-focus/browser-extension",
+  "name": "@youfocus/browser-extension",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -13,9 +13,9 @@
   },
   "devDependencies": {
     "eslint": "^8.2.0",
-    "@yt-focus/eslint-config": "*",
-    "@yt-focus/ui": "*",
-    "@yt-focus/content": "*",
+    "@youfocus/eslint-config": "*",
+    "@youfocus/ui": "*",
+    "@youfocus/content": "*",
     "@crxjs/vite-plugin": "^1.0.14",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",

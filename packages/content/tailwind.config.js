@@ -1,1 +1,1 @@
-module.exports = require('@yt-focus/config/tailwind.config');
+module.exports = require('@youfocus/config/tailwind.config');

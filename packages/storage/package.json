@@ -1,5 +1,5 @@
 {
-  "name": "@yt-focus/storage",
+  "name": "@youfocus/storage",
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "eslint": "^8.2.0",
-    "@yt-focus/eslint-config": "*",
-    "@yt-focus/types": "*"
+    "@youfocus/eslint-config": "*",
+    "@youfocus/types": "*"
   }
 }
