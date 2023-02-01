@@ -1,47 +1,42 @@
+import {
+  Content, RouterContextProvider, SettingsContextProvider, Toolbar,
+} from '@youfocus/content';
 import '@youfocus/ui/index.css';
-import React from 'react';
+import { ELEMENT_CLASSNAMES, observeElementInTheDOM } from '@youfocus/utils';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import { Content, Toolbar, SettingsContextProvider } from '@youfocus/content';
-import { ELEMENT_SELECTOR } from '@youfocus/ui';
 
 /**
  * This Observer looks at that if element is exist at the DOM.
  */
-const observer = new MutationObserver((_, obs) => {
-  if (ELEMENT_SELECTOR.toolbar) {
-    /**
-     * TOOLBAR SHELL INITIALIZE
-     */
-    const root = document.createElement('div');
-    root.id = 'yt-focus-toolbar';
-    document.querySelector('ytd-masthead #end').append(root);
+observeElementInTheDOM(ELEMENT_CLASSNAMES.toolbar, () => {
+  /**
+   * TOOLBAR SHELL INITIALIZE
+   */
+  const root = document.createElement('div');
+  root.id = 'yt-focus-toolbar';
+  document.querySelector('ytd-masthead #end').append(root);
 
-    ReactDOM.createRoot(document.getElementById('yt-focus-toolbar')).render(
-      <React.StrictMode>
-        <Toolbar />
-      </React.StrictMode>,
-    );
+  ReactDOM.createRoot(document.getElementById('yt-focus-toolbar')).render(
+    <StrictMode>
+      <Toolbar />
+    </StrictMode>,
+  );
 
-    /**
-     * CONTENT SHELL INITIALIZE
-     */
-    const contentRoot = document.createElement('div');
-    contentRoot.id = 'yt-focus-content';
-    document.querySelector('body').append(contentRoot);
+  /**
+   * CONTENT SHELL INITIALIZE
+   */
+  const contentRoot = document.createElement('div');
+  contentRoot.id = 'yt-focus-content';
+  document.querySelector('body').append(contentRoot);
 
-    ReactDOM.createRoot(document.getElementById('yt-focus-content')).render(
-      <React.StrictMode>
-        <SettingsContextProvider>
+  ReactDOM.createRoot(document.getElementById('yt-focus-content')).render(
+    <StrictMode>
+      <SettingsContextProvider>
+        <RouterContextProvider>
           <Content />
-        </SettingsContextProvider>
-      </React.StrictMode>,
-    );
-
-    obs.disconnect();
-  }
-});
-
-observer.observe(document, {
-  childList: true,
-  subtree: true,
+        </RouterContextProvider>
+      </SettingsContextProvider>
+    </StrictMode>,
+  );
 });

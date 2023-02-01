@@ -7,28 +7,33 @@ export const ELEMENT_CLASSNAMES = {
 /**
  * Element Selector
  * It's use for finding youtube content elements.
+ * @type {import('@youfocus/types/src/elements.type').ELEMENT_CLASSNAMES}
  */
 export const ELEMENT_SELECTOR = {
   sidebarElement: document.querySelector(ELEMENT_CLASSNAMES.sidebar),
-  comments: document.querySelector(ELEMENT_CLASSNAMES.comments),
   youtubeWrapper: document.querySelector(ELEMENT_CLASSNAMES.app),
+  comments: document.querySelector(ELEMENT_CLASSNAMES.comments),
   toolbar: document.querySelector(ELEMENT_CLASSNAMES.toolbar),
 };
 
 /**
- * Observe Url Change
- * @param {callback} location
+ * @callback location
+ * @param {Location} location
  */
-export function observeUrlChange(callback) {
+/**
+ * Observe Url Change
+ * @param {location} callback
+ */
+export function onLocationPathChanged(callback) {
   let oldHref = document.location.href;
   const body = document.querySelector('body');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach(() => {
       if (oldHref !== document.location.href) {
         oldHref = document.location.href;
-        //
-        //
-        //
+        /**
+         * @type {HTMLDivElement} location
+         */
         callback(document.location);
       }
     });
@@ -37,9 +42,9 @@ export function observeUrlChange(callback) {
 }
 
 /**
- *
- * @param {string} element
- * @param {function} callback
+ * Observe Element in the dom.
+ * @param {String} element
+ * @param {Function} callback
  */
 export function observeElementInTheDOM(element, callback) {
   const observer = new MutationObserver((_, obs) => {
@@ -61,4 +66,12 @@ export function observeElementInTheDOM(element, callback) {
     childList: true,
     subtree: true,
   });
+}
+
+/**
+ * Remove Selected Element
+ * @param {HTMLDivElement} element
+ */
+export function removeSelectedElement(element) {
+  element.remove();
 }

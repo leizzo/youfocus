@@ -1,18 +1,20 @@
+import { SwitchBase } from '@youfocus/ui';
 import {
-  ELEMENT_CLASSNAMES, getMessage, observeElementInTheDOM, observeUrlChange, SwitchBase,
-} from '@youfocus/ui';
+  ELEMENT_CLASSNAMES, getMessage, observeElementInTheDOM,
+  onLocationPathChanged,
+} from '@youfocus/utils';
 import { useSettingsContext } from '../hooks/use-settings.hook';
+
+const changedLocation = (settings) => onLocationPathChanged((location) => {
+  if (location.pathname === '/watch' && settings.isSidebarDisabled) {
+    observeElementInTheDOM(ELEMENT_CLASSNAMES.sidebar, (element) => {
+      element.remove();
+    });
+  }
+});
 
 export function Content() {
   const { settings, updateSettings } = useSettingsContext();
-
-  observeUrlChange((location) => {
-    if (location.pathname === '/watch' && settings.isSidebarDisabled) {
-      observeElementInTheDOM(ELEMENT_CLASSNAMES.sidebar, (element) => {
-        element.remove();
-      });
-    }
-  });
 
   return (
     <div className="flex flex-wrap w-full">

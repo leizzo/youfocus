@@ -1,7 +1,7 @@
 import { Switch } from '@headlessui/react';
+import { classNames } from '@youfocus/utils';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { classNames } from '../../utils/classNames';
 
 /**
  * Switch
