@@ -1,5 +1,5 @@
 import {
-  Content, RouterContextProvider, SettingsContextProvider, Toolbar,
+  Content, SettingsContextProvider, Toolbar,
 } from '@youfocus/content';
 import '@youfocus/ui/index.css';
 import { ELEMENT_CLASSNAMES, observeElementInTheDOM } from '@youfocus/utils';
@@ -33,9 +33,7 @@ observeElementInTheDOM(ELEMENT_CLASSNAMES.toolbar, () => {
   ReactDOM.createRoot(document.getElementById('yt-focus-content')).render(
     <StrictMode>
       <SettingsContextProvider>
-        <RouterContextProvider>
-          <Content />
-        </RouterContextProvider>
+        <Content />
       </SettingsContextProvider>
     </StrictMode>,
   );

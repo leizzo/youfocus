@@ -17,9 +17,13 @@ ytd-app {
 }
 
 #yt-focus-content {
-  @apply w-52 h-full right-0 absolute z-10 p-4 text-sm bg-gradient-to-b  dark:text-white dark:from-zinc-900 from-gray-50;
+  @apply w-52 h-full right-0 fixed z-10 p-4 text-sm bg-gradient-to-b  dark:text-white dark:from-zinc-900 from-gray-50;
 }
 
 #yt-focus-toolbar {
   @apply text-sm;
+}
+
+.overflowhidden {
+  @apply overflow-hidden;
 }

@@ -25,6 +25,8 @@ export const SettingsContext = createContext({
     isShortsDisabled: false,
   },
   updateSettings: () => {},
+  route: document.location,
+  updateRoute: () => {},
 });
 
 /**
@@ -40,7 +42,10 @@ export function SettingsContextProvider({ children }) {
   }, [settings]);
 
   const settingsContextValue = useMemo(() => (
-    { settings, updateSettings }), [settings]);
+    {
+      settings,
+      updateSettings,
+    }), [settings]);
 
   return (
     <SettingsContext.Provider value={settingsContextValue}>

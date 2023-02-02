@@ -3,4 +3,5 @@ export type ELEMENT_CLASSNAMES = {
   youtubeWrapper: HTMLDivElement;
   toolbar: HTMLDivElement;
   comments: HTMLDivElement;
+  html: HTMLDivElement;
 };

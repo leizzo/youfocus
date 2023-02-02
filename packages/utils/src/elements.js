@@ -3,6 +3,12 @@ export const ELEMENT_CLASSNAMES = {
   toolbar: 'ytd-masthead #end',
   sidebar: '#secondary.ytd-watch-flexy',
   comments: 'ytd-comments',
+  html: 'html',
+  /**
+   * TODO:
+   * - Find all Shorts Classes and remove
+   */
+  shorts: 'a[title=Shorts]',
 };
 /**
  * Element Selector
@@ -14,32 +20,8 @@ export const ELEMENT_SELECTOR = {
   youtubeWrapper: document.querySelector(ELEMENT_CLASSNAMES.app),
   comments: document.querySelector(ELEMENT_CLASSNAMES.comments),
   toolbar: document.querySelector(ELEMENT_CLASSNAMES.toolbar),
+  html: document.querySelector(ELEMENT_CLASSNAMES.html),
 };
-
-/**
- * @callback location
- * @param {Location} location
- */
-/**
- * Observe Url Change
- * @param {location} callback
- */
-export function onLocationPathChanged(callback) {
-  let oldHref = document.location.href;
-  const body = document.querySelector('body');
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach(() => {
-      if (oldHref !== document.location.href) {
-        oldHref = document.location.href;
-        /**
-         * @type {HTMLDivElement} location
-         */
-        callback(document.location);
-      }
-    });
-  });
-  observer.observe(body, { childList: true, subtree: true });
-}
 
 /**
  * Observe Element in the dom.
@@ -74,4 +56,24 @@ export function observeElementInTheDOM(element, callback) {
  */
 export function removeSelectedElement(element) {
   element.remove();
+}
+
+/**
+ *
+ */
+const ELEMENT_LIST = {
+  isSidebarDisabled: ELEMENT_CLASSNAMES.sidebar,
+  isCommentDisabled: ELEMENT_CLASSNAMES.comments,
+  isShortsDisabled: ELEMENT_CLASSNAMES.shorts,
+};
+/**
+ *
+ * @param {object} object
+ */
+export function conditionalRemove(object) {
+  Object.entries(object).forEach(([name, value]) => {
+    if (value) {
+      observeElementInTheDOM(ELEMENT_LIST[name], removeSelectedElement);
+    }
+  });
 }

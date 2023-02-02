@@ -9,8 +9,10 @@ export function Toolbar() {
   useEffect(() => {
     if (enabled) {
       ELEMENT_SELECTOR.youtubeWrapper.classList.add('open-yt-focus-options');
+      ELEMENT_SELECTOR.html.classList.add('overflowhidden');
     } else {
       ELEMENT_SELECTOR.youtubeWrapper.classList.remove('open-yt-focus-options');
+      ELEMENT_SELECTOR.html.classList.remove('overflowhidden');
     }
   });
 
@@ -19,7 +21,7 @@ export function Toolbar() {
       <Button onClick={() => setEnabled(!enabled)} text={getMessage('toolbar')} />
       {enabled && (
       <div
-        className="w-full h-screen absolute left-0 top-0"
+        className="w-full h-screen fixed left-0 top-0"
         onClick={() => setEnabled(!enabled)}
         aria-hidden
       />
