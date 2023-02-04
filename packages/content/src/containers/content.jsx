@@ -1,44 +1,38 @@
-import {
-  ELEMENT_CLASSNAMES, getMessage, observeElementInTheDOM, observeUrlChange, SwitchBase,
-} from '@youfocus/ui';
+import { conditionalRemove } from '@youfocus/utils/src/elements';
+import { useEffect } from 'react';
+import { SwitchGroup } from '../components/switch-group.component';
+import { useMutationObserver } from '../hooks/use-mutation-observer.hook';
+import { useRouter } from '../hooks/use-router.hook';
 import { useSettingsContext } from '../hooks/use-settings.hook';
+
+let oldHref = document.location.href;
+const mutationSelector = document.querySelector('body');
 
 export function Content() {
   const { settings, updateSettings } = useSettingsContext();
+  const [updateRoute] = useRouter((state) => [state.updateRoute]);
 
-  observeUrlChange((location) => {
-    if (location.pathname === '/watch' && settings.isSidebarDisabled) {
-      observeElementInTheDOM(ELEMENT_CLASSNAMES.sidebar, (element) => {
-        element.remove();
-      });
-    }
-  });
+  useMutationObserver(
+    mutationSelector,
+    () => {
+      if (oldHref !== document.location.href) {
+        oldHref = document.location.href;
+        updateRoute(document.location);
+      }
+    },
+  );
+
+  useEffect(() => {
+    useRouter.subscribe(({ route }) => {
+      if (route.pathname === '/watch') {
+        conditionalRemove(settings);
+      }
+    });
+  }, [settings]);
 
   return (
     <div className="flex flex-wrap w-full">
-      {Object.entries(settings)
-        .reduce((a, c) => {
-          a.push({ [c[0]]: c[1], key: c[0] });
-          return a;
-        }, [])
-        .map((item) => (
-          <div
-            key={item.key}
-            className="w-full mb-3"
-          >
-            <SwitchBase
-              text={getMessage(item.key)}
-              checked={item[item.key]}
-              onChange={
-                () => updateSettings(
-                  {
-                    [item.key]: !settings[item.key],
-                  },
-                )
-              }
-            />
-          </div>
-        ))}
+      <SwitchGroup data={settings} onChanged={updateSettings} />
     </div>
   );
 }

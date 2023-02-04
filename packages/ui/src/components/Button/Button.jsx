@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { classNames } from '../../utils/classNames';
+import { classNames } from '@youfocus/utils';
 
 /**
  * Button Base

@@ -9,3 +9,5 @@
 </div>
 
 <h3 align="center"><b>YOU<b>FOCUS - A Chrome Extension for better Youtube Experience</h3>
+
+![Structure](./diagrams/structure.excalidraw.png)
