@@ -1,6 +1,7 @@
 <div align="center">
-<image src="https://img.shields.io/github/package-json/v/leizzo/youfocus" />
-<image src="https://github.com/leizzo/youfocus/actions/workflows/docker.yml/badge.svg" >
+<image src="https://img.shields.io/github/package-json/v/leizzo/youfocus" /> <br/>
+<image src="https://github.com/leizzo/youfocus/actions/workflows/browser-extension.yml/badge.svg" >
+<image src="https://vercelbadge.vercel.app/api/leizzo/youfocus" />
 </div>
 <div align="center">
 <image src="https://img.shields.io/chrome-web-store/v/youfocus" />
