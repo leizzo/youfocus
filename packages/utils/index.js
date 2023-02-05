@@ -1,6 +1,6 @@
 export { classNames } from './src/classNames';
 export {
-  ELEMENT_CLASSNAMES,
+  conditionalRemove, ELEMENT_CLASSNAMES,
   ELEMENT_SELECTOR,
   observeElementInTheDOM,
   removeSelectedElement,

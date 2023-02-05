@@ -3,4 +3,5 @@ export const SETTINGS_INITIAL_VALUE: {
   isSidebarDisabled: boolean;
   isShortsDisabled: boolean;
   isCommentDisabled: boolean;
+  isNotificationsDisabled: boolean;
 };

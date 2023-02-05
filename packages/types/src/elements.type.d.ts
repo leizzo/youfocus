@@ -4,4 +4,5 @@ export type ELEMENT_CLASSNAMES = {
   toolbar: HTMLDivElement;
   comments: HTMLDivElement;
   html: HTMLDivElement;
+  notifications: HTMLDivElement;
 };

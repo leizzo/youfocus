@@ -4,6 +4,7 @@ export const ELEMENT_CLASSNAMES = {
   sidebar: '#secondary.ytd-watch-flexy',
   comments: 'ytd-comments',
   html: 'html',
+  notifications: 'ytd-notification-topbar-button-renderer yt-icon-button',
   /**
    * TODO:
    * - Find all Shorts Classes and remove
@@ -20,6 +21,7 @@ export const ELEMENT_SELECTOR = {
   youtubeWrapper: document.querySelector(ELEMENT_CLASSNAMES.app),
   comments: document.querySelector(ELEMENT_CLASSNAMES.comments),
   toolbar: document.querySelector(ELEMENT_CLASSNAMES.toolbar),
+  notifications: document.querySelector(ELEMENT_CLASSNAMES.notifications),
   html: document.querySelector(ELEMENT_CLASSNAMES.html),
 };
 
@@ -36,11 +38,8 @@ export function observeElementInTheDOM(element, callback) {
        *
        */
       callback(el);
-      /**
-       *
-       */
-      obs.disconnect();
     }
+    obs.disconnect();
   });
 
   observer.disconnect();
@@ -65,6 +64,7 @@ const ELEMENT_LIST = {
   isSidebarDisabled: ELEMENT_CLASSNAMES.sidebar,
   isCommentDisabled: ELEMENT_CLASSNAMES.comments,
   isShortsDisabled: ELEMENT_CLASSNAMES.shorts,
+  isNotificationsDisabled: ELEMENT_CLASSNAMES.notifications,
 };
 /**
  *
