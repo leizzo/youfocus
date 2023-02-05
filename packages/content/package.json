@@ -10,7 +10,7 @@
     "@youfocus/storage": "*"
   },
   "devDependencies": {
-    "eslint": "^8.2.0",
+    "eslint": "^8.33.0",
     "@youfocus/eslint-config": "*",
     "@youfocus/types": "*"
   }

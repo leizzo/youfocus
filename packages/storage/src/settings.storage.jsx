@@ -15,5 +15,9 @@ const INITIAL_VALUE = {
 };
 /**
  * Settings Store Hook
+ * @typedef {import('use-chrome-storage').createChromeStorageStateHookLocal}
  */
-export const useSettingsStore = createChromeStorageStateHookLocal(SETTINGS_KEY, INITIAL_VALUE);
+export const useSettingsStore = createChromeStorageStateHookLocal(
+  SETTINGS_KEY,
+  INITIAL_VALUE,
+);
