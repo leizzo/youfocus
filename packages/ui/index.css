@@ -8,16 +8,16 @@ body {
 }
 
 .open-yt-focus-options {
-  @apply -translate-x-52 opacity-20;
+  @apply -translate-x-56 opacity-20;
 }
 
 ytd-app {
-  overflow-x: hidden !important;
+  overflow: hidden !important;
   @apply transition-all ease-in-out duration-300 z-20;
 }
 
 #yt-focus-content {
-  @apply w-52 h-full right-0 fixed z-10 p-4 text-sm bg-gradient-to-b  dark:text-white dark:from-zinc-900 from-gray-50;
+  @apply w-56 h-full right-0 fixed z-10 p-4 text-sm bg-gradient-to-b  dark:text-white dark:from-zinc-900 from-gray-50;
 }
 
 #yt-focus-toolbar {

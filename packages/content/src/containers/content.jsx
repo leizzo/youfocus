@@ -1,5 +1,6 @@
-import { conditionalRemove } from '@youfocus/utils/src/elements';
+import { conditionalRemove } from '@youfocus/utils';
 import { useEffect } from 'react';
+import Footer from '../components/footer.component';
 import { SwitchGroup } from '../components/switch-group.component';
 import { useMutationObserver } from '../hooks/use-mutation-observer.hook';
 import { useRouter } from '../hooks/use-router.hook';
@@ -33,6 +34,7 @@ export function Content() {
   return (
     <div className="flex flex-wrap w-full">
       <SwitchGroup data={settings} onChanged={updateSettings} />
+      <Footer />
     </div>
   );
 }

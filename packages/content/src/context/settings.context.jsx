@@ -1,4 +1,4 @@
-import { useSettingsStore } from '@youfocus/storage';
+import { INITIAL_VALUE, useSettingsStore } from '@youfocus/storage';
 import PropTypes from 'prop-types';
 import {
   createContext, useCallback, useMemo,
@@ -19,14 +19,8 @@ import {
  * @type {import('react').Context<TSettingsContext>}
  */
 export const SettingsContext = createContext({
-  settings: {
-    isSidebarDisabled: false,
-    isCommentDisabled: false,
-    isShortsDisabled: false,
-  },
+  settings: INITIAL_VALUE,
   updateSettings: () => {},
-  route: document.location,
-  updateRoute: () => {},
 });
 
 /**
@@ -35,7 +29,8 @@ export const SettingsContext = createContext({
  * @returns
  */
 export function SettingsContextProvider({ children }) {
-  const [settings, setSettings] = useSettingsStore();
+  // @ts-ignore
+  const [settings, setSettings, isPersistent, error] = useSettingsStore();
 
   const updateSettings = useCallback((data) => {
     setSettings({ ...settings, ...data });
@@ -50,6 +45,12 @@ export function SettingsContextProvider({ children }) {
   return (
     <SettingsContext.Provider value={settingsContextValue}>
       {children}
+      {!isPersistent && (
+      <div>
+        Error writing to the chrome.storage:
+        {error}
+      </div>
+      )}
     </SettingsContext.Provider>
   );
 }

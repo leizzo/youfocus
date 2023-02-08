@@ -1,6 +1,6 @@
 {
   "toolbar": {
-    "message": "YT Focus"
+    "message": "Focus"
   },
   "isSidebarDisabled": {
     "message": "Sidebar Disabled"
@@ -10,5 +10,8 @@
   },
   "isCommentDisabled": {
     "message": "Comment Disabled"
+  },
+  "isNotificationsDisabled": {
+    "message": "Notifications Disabled"
   }
 }

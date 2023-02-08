@@ -6,10 +6,10 @@
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "use-chrome-storage": "^1.0.8"
+    "use-chrome-storage": "^1.0.9"
   },
   "devDependencies": {
-    "eslint": "^8.2.0",
+    "eslint": "^8.33.0",
     "@youfocus/eslint-config": "*",
     "@youfocus/types": "*"
   }
